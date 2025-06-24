@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Elements - Scholarships for Me</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+        }
+        .container-3d {
+            background: #fff;
+            border-radius: 32px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37), 0 1.5px 0 #e0e7ff;
+            padding: 48px 40px 40px 40px;
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+            transform: perspective(800px) rotateY(-6deg) scale(1.02);
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .container-3d:hover {
+            box-shadow: 0 16px 48px 0 rgba(31, 38, 135, 0.45);
+            transform: perspective(800px) rotateY(0deg) scale(1.04);
+        }
+        .logo {
+            width: 90px;
+            margin-bottom: 18px;
+            filter: drop-shadow(0 2px 8px #b3bcf5);
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #2d3a5a;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            color: #6c757d;
+            margin-bottom: 32px;
+        }
+        .input-group {
+            margin-bottom: 22px;
+            text-align: left;
+        }
+        label {
+            font-weight: 600;
+            color: #2d3a5a;
+            margin-bottom: 6px;
+            display: block;
+        }
+        select, input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 12px;
+            border: 1.5px solid #b3bcf5;
+            background: #f4f7ff;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            box-shadow: 0 2px 8px #e0e7ff inset;
+            transition: border 0.2s;
+        }
+        select:focus, input:focus {
+            border: 1.5px solid #6366f1;
+            outline: none;
+        }
+        .btn-3d {
+            width: 100%;
+            padding: 14px 0;
+            border: none;
+            border-radius: 14px;
+            background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            box-shadow: 0 4px 16px 0 rgba(99, 102, 241, 0.18);
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .btn-3d:hover {
+            background: linear-gradient(90deg, #60a5fa 0%, #6366f1 100%);
+            transform: translateY(-2px) scale(1.03);
+        }
+        @media (max-width: 600px) {
+            .container-3d {
+                padding: 24px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-3d">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Education_icon.svg" alt="Education Elements Logo" class="logo">
+        <h1>Education Elements</h1>
+        <div class="subtitle">Find the best scholarships for your future</div>
+        <form action="scholarships.php" method="get">
+            <div class="input-group">
+                <label for="class">Select your class</label>
+                <select name="class" id="class" required>
+                    <option value="">Choose...</option>
+                    <option value="10">10th</option>
+                    <option value="12">12th</option>
+                    <option value="UG">Undergraduate (UG)</option>
+                    <option value="PG">Postgraduate (PG)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="marks">Enter your Marks/CGPA/Percentage</label>
+                <input type="text" name="marks" id="marks" placeholder="e.g. 92% or 9.2 CGPA" required>
+            </div>
+            <button class="btn-3d" type="submit">Find Scholarships</button>
+        </form>
+    </div>
+</body>
+</html>

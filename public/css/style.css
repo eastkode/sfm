@@ -1,0 +1,91 @@
+/* public/css/style.css */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+.hero-section {
+    background-color: #e9ecef;
+    padding: 80px 0;
+    color: #343a40;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-section .lead {
+    font-size: 1.5rem;
+}
+
+.search-box-placeholder {
+    border: 1px dashed #ced4da;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    color: #6c757d;
+}
+
+.featured-scholarships .card {
+    border: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.featured-scholarships .card:hover {
+    transform: translateY(-5px);
+}
+
+.stats-section {
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+
+.stat-item h3 {
+    font-size: 3rem;
+    color: #007bff;
+}
+
+.stat-item p {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+.cta-section {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 60px 0;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-section .btn-light {
+    color: #007bff;
+}
+
+.cta-section .btn-outline-light {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.cta-section .btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #007bff;
+}
+
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+}
