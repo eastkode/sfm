@@ -3,120 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education Elements - Scholarships for Me</title>
-    <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
+    <title>Scholarships for Me - Find Your Future</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        body {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
-        }
-        .container-3d {
-            background: #fff;
-            border-radius: 32px;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37), 0 1.5px 0 #e0e7ff;
-            padding: 48px 40px 40px 40px;
-            max-width: 420px;
-            width: 100%;
-            text-align: center;
-            transform: perspective(800px) rotateY(-6deg) scale(1.02);
-            transition: box-shadow 0.3s, transform 0.3s;
-        }
-        .container-3d:hover {
-            box-shadow: 0 16px 48px 0 rgba(31, 38, 135, 0.45);
-            transform: perspective(800px) rotateY(0deg) scale(1.04);
-        }
-        .logo {
-            width: 90px;
-            margin-bottom: 18px;
-            filter: drop-shadow(0 2px 8px #b3bcf5);
-        }
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: #2d3a5a;
-            letter-spacing: 1px;
-        }
-        .subtitle {
-            font-size: 1.1rem;
-            color: #6c757d;
-            margin-bottom: 32px;
-        }
-        .input-group {
-            margin-bottom: 22px;
-            text-align: left;
-        }
-        label {
-            font-weight: 600;
-            color: #2d3a5a;
-            margin-bottom: 6px;
-            display: block;
-        }
-        select, input[type="text"], input[type="number"] {
-            width: 100%;
-            padding: 12px 14px;
-            border-radius: 12px;
-            border: 1.5px solid #b3bcf5;
-            background: #f4f7ff;
-            font-size: 1rem;
-            margin-bottom: 8px;
-            box-shadow: 0 2px 8px #e0e7ff inset;
-            transition: border 0.2s;
-        }
-        select:focus, input:focus {
-            border: 1.5px solid #6366f1;
-            outline: none;
-        }
-        .btn-3d {
-            width: 100%;
-            padding: 14px 0;
-            border: none;
-            border-radius: 14px;
-            background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
-            color: #fff;
-            font-size: 1.2rem;
-            font-weight: 700;
-            box-shadow: 0 4px 16px 0 rgba(99, 102, 241, 0.18);
-            cursor: pointer;
-            transition: background 0.2s, transform 0.2s;
-        }
-        .btn-3d:hover {
-            background: linear-gradient(90deg, #60a5fa 0%, #6366f1 100%);
-            transform: translateY(-2px) scale(1.03);
-        }
-        @media (max-width: 600px) {
-            .container-3d {
-                padding: 24px 8px;
-            }
-        }
-    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="container-3d">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Education_icon.svg" alt="Education Elements Logo" class="logo">
-        <h1>Education Elements</h1>
-        <div class="subtitle">Find the best scholarships for your future</div>
-        <form action="scholarships.php" method="get">
-            <div class="input-group">
-                <label for="class">Select your class</label>
-                <select name="class" id="class" required>
-                    <option value="">Choose...</option>
-                    <option value="10">10th</option>
-                    <option value="12">12th</option>
-                    <option value="UG">Undergraduate (UG)</option>
-                    <option value="PG">Postgraduate (PG)</option>
-                </select>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">Scholarships for Me</a>
+                <ul class="navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="scholarships.php">Scholarships</a></li>
+                    <li><a href="colleges.php">Colleges</a></li>
+                    <li><a href="about.php">About Us</a></li>
+                    <li><a href="contact.php">Contact Us</a></li>
+                </ul>
             </div>
-            <div class="input-group">
-                <label for="marks">Enter your Marks/CGPA/Percentage</label>
-                <input type="text" name="marks" id="marks" placeholder="e.g. 92% or 9.2 CGPA" required>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <h1>Unlock Your Future with the Right Scholarship</h1>
+            <p class="lead">Discover a world of opportunities. We help you find the perfect scholarships to achieve your educational dreams.</p>
+            <div class="study-elements-animation">
+                <!-- Placeholder for study elements animation -->
+                <i class="fas fa-book"></i>
+                <i class="fas fa-graduation-cap"></i>
+                <i class="fas fa-pencil-alt"></i>
+                <i class="fas fa-atom"></i>
             </div>
-            <button class="btn-3d" type="submit">Find Scholarships</button>
-        </form>
-    </div>
+        </div>
+    </section>
+
+    <section class="search-section">
+        <div class="container">
+            <h2>Find Your Scholarship</h2>
+            <form action="scholarships.php" method="get" class="scholarship-search-form">
+                <div class="form-group">
+                    <label for="class-level">Select Your Class</label>
+                    <select name="class" id="class-level" required>
+                        <option value="">Choose...</option>
+                        <option value="10">10th</option>
+                        <option value="12">12th</option>
+                        <option value="UG">Undergraduate (UG)</option>
+                        <option value="PG">Postgraduate (PG)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="marks-input">Enter Your Marks/CGPA/Percentage</label>
+                    <input type="text" name="marks" id="marks-input" placeholder="e.g. 92% or 9.2 CGPA" required>
+                </div>
+                <div class="form-group">
+                    <label for="field-study">Field of Study (Optional)</label>
+                    <input type="text" name="field" id="field-study" placeholder="e.g. Engineering, Medicine, Arts">
+                </div>
+                <button type="submit" class="btn btn-primary">Find Scholarships</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="featured-scholarships">
+        <div class="container">
+            <h2>Featured Scholarships</h2>
+            <div class="scholarship-grid">
+                <!-- Placeholder for scholarship cards -->
+                <div class="scholarship-card">
+                    <img src="https://via.placeholder.com/300x200?text=Scholarship+Image" alt="Scholarship Name">
+                    <h3>Scholarship Title 1</h3>
+                    <p>A brief description of the scholarship, its benefits, and eligibility.</p>
+                    <a href="scholarship_detail.php?id=1" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="scholarship-card">
+                    <img src="https://via.placeholder.com/300x200?text=Scholarship+Image" alt="Scholarship Name">
+                    <h3>Scholarship Title 2</h3>
+                    <p>A brief description of the scholarship, its benefits, and eligibility.</p>
+                    <a href="scholarship_detail.php?id=2" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="scholarship-card">
+                    <img src="https://via.placeholder.com/300x200?text=Scholarship+Image" alt="Scholarship Name">
+                    <h3>Scholarship Title 3</h3>
+                    <p>A brief description of the scholarship, its benefits, and eligibility.</p>
+                    <a href="scholarship_detail.php?id=3" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-search-dollar fa-3x"></i>
+                    <h3>Comprehensive Database</h3>
+                    <p>Access a vast and updated list of scholarships from various sources.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-user-check fa-3x"></i>
+                    <h3>Personalized Matches</h3>
+                    <p>Our smart algorithm helps you find scholarships tailored to your profile.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-cogs fa-3x"></i>
+                    <h3>Easy Application Process</h3>
+                    <p>Streamlined application submission for a hassle-free experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial-slider">
+                <!-- Placeholder for testimonials -->
+                <div class="testimonial-item">
+                    <p>"This platform helped me find the perfect scholarship for my engineering degree. Highly recommended!"</p>
+                    <h4>- John Doe, Engineering Student</h4>
+                </div>
+                <div class="testimonial-item">
+                    <p>"A fantastic resource for students! The personalized matches saved me so much time."</p>
+                    <h4>- Jane Smith, Medical Student</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>Scholarships for Me</h3>
+                    <p>Your trusted partner in finding the best scholarships to support your educational journey.</p>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="scholarships.php">Scholarships</a></li>
+                        <li><a href="colleges.php">Colleges</a></li>
+                        <li><a href="faq.php">FAQ</a></li>
+                        <li><a href="contact.php">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact-social">
+                    <h3>Connect With Us</h3>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Scholarships for Me. All Rights Reserved.</p>
+                <p><a href="privacy.php">Privacy Policy</a> | <a href="terms.php">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
